@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>User Listing</h1>
+    <ul>
+      {%for user in users%}
+      <li>
+        <a href="/users/{{user.id}}">{{user.full_name}}</a> -
+        <a href="/users/{{user.id}}/posts/new">Add post</a>
+      </li>
+      {%endfor%}
+    </ul>
+    <form action="/users/new">
+      <button>Add user</button>
+    </form>
+  </body>
+</html>

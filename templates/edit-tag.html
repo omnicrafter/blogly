@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tag Details</title>
+  </head>
+  <body>
+    <h1>Edit Tag</h1>
+    <form action="/tags/{{tag.id}}/edit" method="POST" id="edit-tag-form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter Tag Name"
+        value="{{tag.name}}"
+      />
+      <button type="submit">Submit Edit</button>
+    </form>
+    <form action="/tags/{{tag.id}}/delete" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>
